@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014/12/30 00:07:46.038.pas,C:\Users\dave\Documents\RAD Studio\Projects\Unit1.pas=C:\Dropbox\dev\HAB\Gateways\PAPCClient\Main.pas</Transaction>
+    <Transaction>2014/12/30 00:07:46.038.dfm,C:\Users\dave\Documents\RAD Studio\Projects\Unit1.dfm=C:\Dropbox\dev\HAB\Gateways\PAPCClient\Main.dfm</Transaction>
+    <Transaction>2014/12/30 00:07:50.153.dproj,C:\Users\dave\Documents\RAD Studio\Projects\Project1.dproj=C:\Dropbox\dev\HAB\Gateways\PAPCClient\PCPCClient.dproj</Transaction>
+    <Transaction>2014/12/30 11:07:31.081.dproj,C:\Dropbox\dev\HAB\Gateways\PAPCClient\PCPCClient.dproj=C:\Dropbox\dev\HAB\Gateways\PAPCClient\PCPAClient.dproj</Transaction>
+    <Transaction>2016/06/30 11:16:08.220.dproj,C:\Dropbox\dev\HAB\Gateways\PAPCClient\PCPAClient.dproj=C:\Dropbox\dev\HAB\Gateways\WindowsGateway\LoRaGateway.dproj</Transaction>
+    <Transaction>2016/06/30 11:16:24.597.dproj,C:\Dropbox\dev\HAB\Gateways\WindowsGateway\LoRaGateway.dproj=C:\Dropbox\dev\HAB\Gateways\WindowsGateway\LoRaSerialGateway.dproj</Transaction>
+    <Transaction>2016/06/30 11:16:40.350.pas,C:\Dropbox\dev\HAB\Gateways\PAPCClient\Main.pas=C:\Dropbox\dev\HAB\Gateways\WindowsGateway\Main.pas</Transaction>
+    <Transaction>2016/06/30 11:16:40.350.dfm,C:\Dropbox\dev\HAB\Gateways\PAPCClient\Main.dfm=C:\Dropbox\dev\HAB\Gateways\WindowsGateway\Main.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
