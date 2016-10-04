@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'LoRa Serial/Bluetooth Gateway V1.2'
+  Caption = 'LoRa Serial/Bluetooth Gateway V1.1'
   ClientHeight = 614
   ClientWidth = 606
   Color = clBtnFace
@@ -211,9 +211,9 @@ object Form1: TForm1
     Width = 112
     Height = 27
     ItemHeight = 19
-    ItemIndex = 1
+    ItemIndex = 2
     TabOrder = 7
-    Text = '1 - Fast'
+    Text = '2 - Repeater'
     Items.Strings = (
       '0 - Slow'
       '1 - Fast'

@@ -235,6 +235,22 @@ begin
 
     json := json + ']}';
 
+(*
+{
+    "type": "packets",
+    "packets":
+    [
+        {
+            "type": "packet",
+            "packet":"5566001C1CB7780199664D101C0B7A886C6D721A70C7D179AC9B8F18C7C886127D0B571D454BA8DEC52823F8C27F14DFCD9DACA83FD9159935EDC5C36E966763EE6A0A4A1C9B344920A5FC69297EB486141F4A38A6F3407F4381A33498A558D98E00340099A0D5D8349BBB8C6C89B07B915A96FE13BA9305C8507D29FF4073B460935D9C1E0F403F78E5AB520F0FD9C182B129C773CD3516C9E6479EC76B34A42A46C4FB0AD383C3B73291BB0A3F3AEF63B38631854007D2A61101D00CD57213CC8E4ED7C2687993731F4E95B369A05AC007EED777AE2B59146475FF95E0EE321551DA3339684E43619B7BCE8C34857D4959F64E6FAF1809A8A457850C27000F",
+            "encoding": "hex",
+            "received": "2016-09-23T14:41:10Z",
+            "receiver": "M0RPI"
+        }
+    ]
+}
+*)
+
     // Need the JSON as a stream
     JsonToSend := TStringStream.Create(Json, TEncoding.UTF8);
 
@@ -271,20 +287,15 @@ begin
             end;
         end;
     end else if Command = 'HEX' then begin
-        if (Copy(Line,1,2) = '66') or (Copy(Line,1,2) = 'E6') then begin
-            lstPackets.Items.Add(Line);
-            lstPackets.ItemIndex := lstPackets.Items.Count-1;
-            if Copy(Line,1,2) = 'E6' then begin
-                Line[1] := '6';
-            end;
-            pnlSSDVCount.Caption := IntToStr(StrToIntdef(pnlSSDVCount.Caption, 0) + 1);
-            if chkOnline.Checked then begin
-                CritSSDV.Enter;
-                try
-                    SSDVPackets.Add(Line);
-                finally
-                    CritSSDV.Leave;
-                end;
+        lstPackets.Items.Add(Line);
+        lstPackets.ItemIndex := lstPackets.Items.Count-1;
+        pnlSSDVCount.Caption := IntToStr(StrToIntdef(pnlSSDVCount.Caption, 0) + 1);
+        if chkOnline.Checked then begin
+            CritSSDV.Enter;
+            try
+                SSDVPackets.Add(Line);
+            finally
+                CritSSDV.Leave;
             end;
         end;
     end else if Command = 'FREQERR' then begin

@@ -271,12 +271,13 @@ begin
             end;
         end;
     end else if Command = 'HEX' then begin
-        if (Copy(Line,1,2) = '66') or (Copy(Line,1,2) = 'E6') then begin
+        if Copy(Line,1,2) = 'E6' then begin
+            Line[1] := '6';
+        end;
+
+        if Copy(Line,1,2) = '66' then begin
             lstPackets.Items.Add(Line);
             lstPackets.ItemIndex := lstPackets.Items.Count-1;
-            if Copy(Line,1,2) = 'E6' then begin
-                Line[1] := '6';
-            end;
             pnlSSDVCount.Caption := IntToStr(StrToIntdef(pnlSSDVCount.Caption, 0) + 1);
             if chkOnline.Checked then begin
                 CritSSDV.Enter;
