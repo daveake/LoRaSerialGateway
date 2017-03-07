@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'LoRa Serial/Bluetooth Gateway V1.2'
+  Caption = 'LoRa Serial/Bluetooth Gateway V1.3'
   ClientHeight = 614
   ClientWidth = 606
   Color = clBtnFace
@@ -391,8 +391,8 @@ object Form1: TForm1
     Baudrate = br57600
     FlowControl.OutCtsFlow = False
     FlowControl.OutDsrFlow = False
-    FlowControl.ControlDtr = dtrDisabled
-    FlowControl.ControlRts = rtsDisabled
+    FlowControl.ControlDtr = dtrEnabled
+    FlowControl.ControlRts = rtsEnabled
     FlowControl.XonXoffOut = False
     FlowControl.XonXoffIn = False
     FlowControl.DsrSensitivity = False
