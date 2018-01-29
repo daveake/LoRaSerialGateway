@@ -65,6 +65,8 @@ type
     pnlSSDVQueue: TPanel;
     tmrScreenUpdates: TTimer;
     IdHTTP2: TIdHTTP;
+    Label17: TLabel;
+    pnlAverageRSSI: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure ComboBox1CloseUp(Sender: TObject);
     procedure VaComm1RxChar(Sender: TObject; Count: Integer);
@@ -258,6 +260,11 @@ begin
 
     if Command = 'CURRENTRSSI' then begin
         pnlRSSI.Caption := string(Line + 'dBm');
+        if pnlAverageRSSI.Caption = '' then begin
+            pnlAverageRSSI.Caption := string(Line + 'dBm');
+        end else begin
+            pnlAverageRSSI.Caption := IntToStr(Round(StrToFloat(Copy(pnlAverageRSSI.Caption, 1, Length(pnlAverageRSSI.Caption)-3)) * 0.8 + StrToFloat(Line) * 0.2)) + 'dBm';
+        end;
     end else if Command = 'MESSAGE' then begin
         lstPackets.Items.Add(Line);
         lstPackets.ItemIndex := lstPackets.Items.Count-1;

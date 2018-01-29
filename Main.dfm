@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'LoRa Serial/Bluetooth Gateway V1.3'
+  Caption = 'LoRa Serial/Bluetooth Gateway V1.4'
   ClientHeight = 614
   ClientWidth = 606
   Color = clBtnFace
@@ -143,6 +143,14 @@ object Form1: TForm1
     Height = 19
     Alignment = taRightJustify
     Caption = 'SSDV Q:'
+  end
+  object Label17: TLabel
+    Left = 215
+    Top = 120
+    Width = 103
+    Height = 19
+    Alignment = taRightJustify
+    Caption = 'Average RSSI:'
   end
   object lstCommands: TListBox
     Left = 476
@@ -387,6 +395,14 @@ object Form1: TForm1
     BevelOuter = bvLowered
     TabOrder = 22
   end
+  object pnlAverageRSSI: TPanel
+    Left = 332
+    Top = 116
+    Width = 89
+    Height = 27
+    BevelOuter = bvLowered
+    TabOrder = 23
+  end
   object VaComm1: TVaComm
     Baudrate = br57600
     FlowControl.OutCtsFlow = False
@@ -400,8 +416,8 @@ object Form1: TForm1
     DeviceName = 'COM%d'
     OnRxChar = VaComm1RxChar
     Version = '1.5.2.0'
-    Left = 304
-    Top = 116
+    Left = 316
+    Top = 48
   end
   object tmrCommands: TTimer
     Interval = 100
@@ -423,8 +439,8 @@ object Form1: TForm1
   end
   object tmrScreenUpdates: TTimer
     OnTimer = tmrScreenUpdatesTimer
-    Left = 372
-    Top = 120
+    Left = 384
+    Top = 52
   end
   object IdHTTP2: TIdHTTP
     AllowCookies = True
