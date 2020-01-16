@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'LoRa Serial/Bluetooth Gateway V1.4'
+  Caption = 'LoRa Serial/Bluetooth Gateway V1.5'
   ClientHeight = 614
   ClientWidth = 606
   Color = clBtnFace
@@ -168,6 +168,7 @@ object Form1: TForm1
     Height = 27
     Style = csDropDownList
     ItemHeight = 19
+    Sorted = True
     TabOrder = 0
     OnCloseUp = ComboBox1CloseUp
   end
@@ -414,8 +415,10 @@ object Form1: TForm1
     FlowControl.DsrSensitivity = False
     FlowControl.TxContinueOnXoff = False
     DeviceName = 'COM%d'
+    SettingsStore.RegRoot = rrCURRENTUSER
+    SettingsStore.Location = slINIFile
     OnRxChar = VaComm1RxChar
-    Version = '1.5.2.0'
+    Version = '2.0.4.0'
     Left = 316
     Top = 48
   end

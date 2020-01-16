@@ -150,7 +150,7 @@ begin
     reg := TRegistry.Create;
     try
         reg.RootKey := HKEY_LOCAL_MACHINE;
-        reg.OpenKey('hardware\devicemap\serialcomm', False);
+        reg.OpenKeyReadOnly('hardware\devicemap\serialcomm');
         st := TstringList.Create;
         try
             reg.GetValueNames(st);

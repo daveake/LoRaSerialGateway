@@ -1,4 +1,6 @@
-This project links to a LoRa device via a serial interface, which could be USB (e.g. Prolific or FTDI adapter) or Bluetooth (e.g. HC-06).  It provides simple controls to set the LoRa parameters (frequency, bandwidth etc.), displays incoming telemetry packets, and optionally uploads those packets to the Habitat server.
+This project links to a LoRa device via a serial interface, which could be USB (e.g. Prolific or FTDI adapter) or Bluetooth (e.g. HC-06).  The Uputronics LoRaOTG device is ideal.
+
+It provides simple controls to set the LoRa parameters (frequency, bandwidth etc.), displays incoming telemetry packets, and optionally uploads those packets to the Habitat/SSDV servers.
 
 Capabilities
 ------------
@@ -23,7 +25,7 @@ Matching firmware for Arduino or compatible devices/chips available here - https
 
 The serial protocol is described there.
 
-** Note ** V1.1 of this Winbdows program requires V1.1 of the firmware, because the baud rate is now 57,600 on both (was 9,600 on V1.0)
+** Note ** V1.1 and later of this Windows program requires V1.1 or later of the firmware, because the baud rate is now 57,600 on both (was 9,600 on V1.0)
 
 Build
 -----
@@ -35,8 +37,17 @@ If you prefer something built with open source software, feel free to write in P
 History
 -------
 
-23/09/2016	V1.1	- Added LoRa modes 3-7
-					- Added SSDV uploader
-					- SSDV and telemetry uploaders are now threads
-					- Baud rate now 57,600
+<u>16/1/2020	V1.5</u>
+
+- The code to populate the serial port box failed for Windows 10 UAC due to requiring R/W access to registry.
+
+  
+
+<u>23/09/2016	V1.1</u>
+
+- Added LoRa modes 3-7
+
+- Added SSDV uploader
+- SSDV and telemetry uploaders are now threads
+- Baud rate now 57,600
 
