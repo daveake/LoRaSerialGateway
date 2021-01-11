@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'LoRa Serial/Bluetooth Gateway V1.5'
-  ClientHeight = 614
+  Caption = 'LoRa Serial/Bluetooth Gateway V1.7'
+  ClientHeight = 691
   ClientWidth = 606
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,6 +15,9 @@ object Form1: TForm1
   OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
+  DesignSize = (
+    606
+    691)
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel
@@ -190,9 +193,9 @@ object Form1: TForm1
     TabOrder = 2
   end
   object btnSet: TButton
-    Left = 477
+    Left = 468
     Top = 174
-    Width = 121
+    Width = 130
     Height = 92
     Caption = 'Set'
     TabOrder = 3
@@ -204,7 +207,7 @@ object Form1: TForm1
     Width = 85
     Height = 27
     TabOrder = 4
-    Text = '434.450'
+    Text = '434.425'
   end
   object Panel1: TPanel
     Left = 13
@@ -241,20 +244,6 @@ object Form1: TForm1
     BevelOuter = bvLowered
     TabOrder = 8
   end
-  object lstPackets: TListBox
-    Left = 8
-    Top = 368
-    Width = 590
-    Height = 237
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Courier New'
-    Font.Style = []
-    ItemHeight = 18
-    ParentFont = False
-    TabOrder = 9
-  end
   object cmbCoding: TComboBox
     Left = 332
     Top = 206
@@ -262,7 +251,7 @@ object Form1: TForm1
     Height = 27
     ItemHeight = 19
     ItemIndex = 0
-    TabOrder = 10
+    TabOrder = 9
     Text = '(default)'
     Items.Strings = (
       '(default)'
@@ -278,7 +267,7 @@ object Form1: TForm1
     Height = 27
     ItemHeight = 19
     ItemIndex = 0
-    TabOrder = 11
+    TabOrder = 10
     Text = '(default)'
     Items.Strings = (
       '(default)'
@@ -296,7 +285,7 @@ object Form1: TForm1
     Width = 85
     Height = 27
     ItemHeight = 19
-    TabOrder = 12
+    TabOrder = 11
     Text = '(default)'
     Items.Strings = (
       '(default)'
@@ -317,7 +306,7 @@ object Form1: TForm1
     Width = 85
     Height = 27
     ItemHeight = 19
-    TabOrder = 13
+    TabOrder = 12
     Text = '(default)'
     Items.Strings = (
       '(default)'
@@ -330,7 +319,7 @@ object Form1: TForm1
     Width = 89
     Height = 27
     BevelOuter = bvLowered
-    TabOrder = 14
+    TabOrder = 13
   end
   object pnlFrequencyError: TPanel
     Left = 120
@@ -338,7 +327,7 @@ object Form1: TForm1
     Width = 89
     Height = 27
     BevelOuter = bvLowered
-    TabOrder = 15
+    TabOrder = 14
   end
   object pnlPacketRSSI: TPanel
     Left = 328
@@ -346,7 +335,7 @@ object Form1: TForm1
     Width = 89
     Height = 27
     BevelOuter = bvLowered
-    TabOrder = 16
+    TabOrder = 15
   end
   object pnlPacketSNR: TPanel
     Left = 504
@@ -354,7 +343,7 @@ object Form1: TForm1
     Width = 89
     Height = 27
     BevelOuter = bvLowered
-    TabOrder = 17
+    TabOrder = 16
   end
   object chkOnline: TCheckBox
     Left = 332
@@ -362,7 +351,7 @@ object Form1: TForm1
     Width = 225
     Height = 17
     Caption = 'Upload to Habitat'
-    TabOrder = 18
+    TabOrder = 17
   end
   object Panel3: TPanel
     Left = 13
@@ -370,14 +359,14 @@ object Form1: TForm1
     Width = 585
     Height = 5
     BevelOuter = bvLowered
-    TabOrder = 19
+    TabOrder = 18
   end
   object edtCallsign: TEdit
     Left = 120
     Top = 61
     Width = 181
     Height = 27
-    TabOrder = 20
+    TabOrder = 19
     Text = 'M0RPI'
   end
   object pnlSSDVCount: TPanel
@@ -386,7 +375,7 @@ object Form1: TForm1
     Width = 89
     Height = 27
     BevelOuter = bvLowered
-    TabOrder = 21
+    TabOrder = 20
   end
   object pnlSSDVQueue: TPanel
     Left = 504
@@ -394,7 +383,7 @@ object Form1: TForm1
     Width = 89
     Height = 27
     BevelOuter = bvLowered
-    TabOrder = 22
+    TabOrder = 21
   end
   object pnlAverageRSSI: TPanel
     Left = 332
@@ -402,7 +391,140 @@ object Form1: TForm1
     Width = 89
     Height = 27
     BevelOuter = bvLowered
+    TabOrder = 22
+  end
+  object PageControl1: TPageControl
+    Left = 8
+    Top = 408
+    Width = 590
+    Height = 275
+    ActivePage = TabSheet1
+    Anchors = [akLeft, akTop, akRight, akBottom]
     TabOrder = 23
+    object TabSheet1: TTabSheet
+      Caption = 'Comms'
+      ExplicitHeight = 208
+      object lstPackets: TListBox
+        Left = 0
+        Top = 0
+        Width = 582
+        Height = 241
+        Align = alClient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ItemHeight = 18
+        ParentFont = False
+        TabOrder = 0
+        ExplicitLeft = -8
+        ExplicitTop = -29
+        ExplicitWidth = 590
+        ExplicitHeight = 237
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Band Scan'
+      ImageIndex = 1
+      ExplicitHeight = 208
+      DesignSize = (
+        582
+        241)
+      object Label19: TLabel
+        Left = 372
+        Top = 7
+        Width = 78
+        Height = 19
+        Alignment = taRightJustify
+        Caption = 'Frequency:'
+      end
+      object Button1: TButton
+        Left = 3
+        Top = 3
+        Width = 190
+        Height = 30
+        Caption = 'Scan Band For Signal'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+      object pnlScanFrequency: TPanel
+        Left = 456
+        Top = 3
+        Width = 117
+        Height = 27
+        BevelOuter = bvLowered
+        TabOrder = 1
+      end
+      object Chart1: TChart
+        Left = 3
+        Top = 39
+        Width = 576
+        Height = 199
+        Legend.Visible = False
+        Title.Text.Strings = (
+          'TChart')
+        Title.Visible = False
+        View3D = False
+        TabOrder = 2
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        ExplicitHeight = 243
+        object Series4: TFastLineSeries
+          Marks.Arrow.Visible = True
+          Marks.Callout.Brush.Color = clBlack
+          Marks.Callout.Arrow.Visible = True
+          Marks.Visible = False
+          Title = 'RSSI'
+          LinePen.Color = clBlue
+          LinePen.Width = 2
+          XValues.Name = 'X'
+          XValues.Order = loAscending
+          YValues.Name = 'Y'
+          YValues.Order = loNone
+        end
+      end
+    end
+  end
+  object Button2: TButton
+    Left = 436
+    Top = 368
+    Width = 157
+    Height = 30
+    Caption = 'Search +/- 10kHz'
+    TabOrder = 24
+    OnClick = Button2Click
+  end
+  object pnlSearchFrequency: TPanel
+    Left = 327
+    Top = 368
+    Width = 90
+    Height = 27
+    BevelOuter = bvLowered
+    TabOrder = 25
+  end
+  object Panel4: TPanel
+    Left = 13
+    Top = 357
+    Width = 585
+    Height = 5
+    BevelOuter = bvLowered
+    TabOrder = 26
+  end
+  object ProgressBar1: TProgressBar
+    Left = 13
+    Top = 368
+    Width = 305
+    Height = 27
+    BarColor = clNavy
+    TabOrder = 27
+  end
+  object chkAFC: TCheckBox
+    Left = 468
+    Top = 122
+    Width = 97
+    Height = 21
+    Caption = 'AFC'
+    TabOrder = 28
   end
   object VaComm1: TVaComm
     Baudrate = br57600
@@ -418,15 +540,15 @@ object Form1: TForm1
     SettingsStore.RegRoot = rrCURRENTUSER
     SettingsStore.Location = slINIFile
     OnRxChar = VaComm1RxChar
-    Version = '2.0.4.0'
+    Version = '2.1.0.1'
     Left = 316
     Top = 48
   end
   object tmrCommands: TTimer
     Interval = 100
     OnTimer = tmrCommandsTimer
-    Left = 492
-    Top = 116
+    Left = 500
+    Top = 60
   end
   object IdHTTP1: TIdHTTP
     AllowCookies = True
@@ -456,5 +578,12 @@ object Form1: TForm1
     HTTPOptions = [hoForceEncodeParams]
     Left = 556
     Top = 140
+  end
+  object tmrSearch: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = tmrSearchTimer
+    Left = 320
+    Top = 392
   end
 end
